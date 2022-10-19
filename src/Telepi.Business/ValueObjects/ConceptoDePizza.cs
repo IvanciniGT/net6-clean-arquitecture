@@ -1,7 +1,7 @@
 ﻿using Telepi.Business.Commons;
 namespace Telepi.Business.ValueObjects;
 
-public class Pizza : ValueObject
+public class ConceptoDePizza : ValueObject
 {
 
     public IReadOnlyCollection<Ingrediente> Ingredientes { get; private set; }
@@ -9,7 +9,7 @@ public class Pizza : ValueObject
     public Masa Masa { get; private set; }
 
 
-    public Pizza(IReadOnlyCollection<Ingrediente> ingredientes, Masa masa)
+    public ConceptoDePizza(IReadOnlyCollection<Ingrediente> ingredientes, Masa masa)
     {
         Ingredientes = ingredientes;
         Masa = masa;

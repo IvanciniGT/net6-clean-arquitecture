@@ -4,22 +4,22 @@ using Telepi.Business.ValueObjects;
 
 namespace Telepi.Business.Entities
 {
-    public class PizzaPredisenada
+    public class Pizza
     {
 
         public int Id { get;  set; }
-        public string Nombre { get;  set; }
-        public ConceptoDePizza Pizza { get;  set; }
+        public PizzaPersonalizada PizzaPersonalziada { get; set; }
+        public Pedido Pedido { get; set; }
 
-        public PizzaPredisenada()
+        public Pizza()
         {
             // TODO: Revisar id... si se calcula en automatico si no se pasa.... y si permito pasarlo}
         }
-        public PizzaPredisenada(int id, string nombre, ConceptoDePizza pizza)
+        public Pizza(int id, PizzaPersonalizada pizzaPersonalziada, Pedido pedido)
         {
             Id = id;
-            Pizza = pizza;
-            Nombre = nombre;
+            PizzaPersonalziada = pizzaPersonalziada;
+            Pedido = pedido;
         }
 
     }
