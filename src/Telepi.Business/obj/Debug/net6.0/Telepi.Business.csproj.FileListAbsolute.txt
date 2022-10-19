@@ -1,0 +1,5 @@
+/Users/ivan/Projects/Curso/src/Telepi.Business/obj/Debug/net6.0/Telepi.Business.csproj.AssemblyReference.cache
+/Users/ivan/Projects/Curso/src/Telepi.Business/obj/Debug/net6.0/Telepi.Business.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivan/Projects/Curso/src/Telepi.Business/obj/Debug/net6.0/Telepi.Business.AssemblyInfoInputs.cache
+/Users/ivan/Projects/Curso/src/Telepi.Business/obj/Debug/net6.0/Telepi.Business.AssemblyInfo.cs
+/Users/ivan/Projects/Curso/src/Telepi.Business/obj/Debug/net6.0/Telepi.Business.csproj.CoreCompileInputs.cache

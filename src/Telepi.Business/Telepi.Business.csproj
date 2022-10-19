@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Entities\" />
+    <None Remove="Events\" />
+    <None Remove="Exceptions\" />
+    <None Remove="Enums\" />
+    <None Remove="ValueObjects\" />
+    <None Remove="Commons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Events\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Enums\" />
+    <Folder Include="ValueObjects\" />
+    <Folder Include="Commons\" />
+  </ItemGroup>
+</Project>
