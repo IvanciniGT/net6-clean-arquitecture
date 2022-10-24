@@ -10,10 +10,12 @@ public class PizzaPersonalizada : ValueObject
 
     public Tamano Tamano { get; private set; }
 
+    //public PizzaPersonalizada() {
+    //}
 
     public PizzaPersonalizada(ConceptoDePizza conceptoDePizza, Tamano tamano)
     {
-        ConceptoDePizza= conceptoDePizza;
+        ConceptoDePizza = conceptoDePizza;
         Tamano= tamano;
     }
 
