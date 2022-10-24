@@ -3,3 +3,10 @@
 /Users/ivan/Projects/Curso/src/Telepi.Business/obj/Debug/net6.0/Telepi.Business.AssemblyInfoInputs.cache
 /Users/ivan/Projects/Curso/src/Telepi.Business/obj/Debug/net6.0/Telepi.Business.AssemblyInfo.cs
 /Users/ivan/Projects/Curso/src/Telepi.Business/obj/Debug/net6.0/Telepi.Business.csproj.CoreCompileInputs.cache
+/Users/ivan/Projects/Curso/src/Telepi.Business/bin/Debug/net6.0/Telepi.Business.deps.json
+/Users/ivan/Projects/Curso/src/Telepi.Business/bin/Debug/net6.0/Telepi.Business.dll
+/Users/ivan/Projects/Curso/src/Telepi.Business/bin/Debug/net6.0/Telepi.Business.pdb
+/Users/ivan/Projects/Curso/src/Telepi.Business/obj/Debug/net6.0/Telepi.Business.dll
+/Users/ivan/Projects/Curso/src/Telepi.Business/obj/Debug/net6.0/refint/Telepi.Business.dll
+/Users/ivan/Projects/Curso/src/Telepi.Business/obj/Debug/net6.0/Telepi.Business.pdb
+/Users/ivan/Projects/Curso/src/Telepi.Business/obj/Debug/net6.0/ref/Telepi.Business.dll

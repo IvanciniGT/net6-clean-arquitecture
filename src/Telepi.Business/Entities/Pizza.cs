@@ -11,12 +11,23 @@ namespace Telepi.Business.Entities
         public PizzaPersonalizada PizzaPersonalziada { get; set; }
         public Pedido Pedido { get; set; }
 
-        public Pizza()
+        private bool _lista;
+        public bool Lista
         {
-            // TODO: Revisar id... si se calcula en automatico si no se pasa.... y si permito pasarlo}
+            get => _lista;
+            set
+            {
+                _lista = value;
+                if (_lista)
+                {
+                    Pedido.notificarQueLaPizzaEstaLista();
+                }
+            }
         }
+
         public Pizza(int id, PizzaPersonalizada pizzaPersonalziada, Pedido pedido)
         {
+            Lista = false;
             Id = id;
             PizzaPersonalziada = pizzaPersonalziada;
             Pedido = pedido;
