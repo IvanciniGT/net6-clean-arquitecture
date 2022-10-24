@@ -1,0 +1,12 @@
+/Users/ivan/Projects/Curso/Telepi.Application/bin/Debug/net6.0/Telepi.Application.deps.json
+/Users/ivan/Projects/Curso/Telepi.Application/bin/Debug/net6.0/Telepi.Application.dll
+/Users/ivan/Projects/Curso/Telepi.Application/bin/Debug/net6.0/Telepi.Application.pdb
+/Users/ivan/Projects/Curso/Telepi.Application/obj/Debug/net6.0/Telepi.Application.csproj.AssemblyReference.cache
+/Users/ivan/Projects/Curso/Telepi.Application/obj/Debug/net6.0/Telepi.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivan/Projects/Curso/Telepi.Application/obj/Debug/net6.0/Telepi.Application.AssemblyInfoInputs.cache
+/Users/ivan/Projects/Curso/Telepi.Application/obj/Debug/net6.0/Telepi.Application.AssemblyInfo.cs
+/Users/ivan/Projects/Curso/Telepi.Application/obj/Debug/net6.0/Telepi.Application.csproj.CoreCompileInputs.cache
+/Users/ivan/Projects/Curso/Telepi.Application/obj/Debug/net6.0/Telepi.Application.dll
+/Users/ivan/Projects/Curso/Telepi.Application/obj/Debug/net6.0/refint/Telepi.Application.dll
+/Users/ivan/Projects/Curso/Telepi.Application/obj/Debug/net6.0/Telepi.Application.pdb
+/Users/ivan/Projects/Curso/Telepi.Application/obj/Debug/net6.0/ref/Telepi.Application.dll
