@@ -17,7 +17,6 @@
     <None Remove="Entities\Pedidos\Handlers\" />
     <None Remove="Commons\" />
     <None Remove="Commons\Mediator\" />
-    <None Remove="Commons\Repository\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dtos\" />
@@ -30,7 +29,6 @@
     <Folder Include="Entities\Pedidos\Handlers\" />
     <Folder Include="Commons\" />
     <Folder Include="Commons\Mediator\" />
-    <Folder Include="Commons\Repository\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\src\Telepi.Business\Telepi.Business.csproj" />
