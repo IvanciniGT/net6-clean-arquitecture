@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <None Remove="Dtos\" />
-    <None Remove="Services\" />
     <None Remove="Entities\" />
     <None Remove="Entities\Pedidos\" />
     <None Remove="Entities\Pedidos\Queries\" />
@@ -16,10 +15,12 @@
     <None Remove="Entities\Pedidos %28copiar%29\Commands\" />
     <None Remove="Entities\Pizzas\Queries\" />
     <None Remove="Entities\Pedidos\Handlers\" />
+    <None Remove="Commons\" />
+    <None Remove="Commons\Mediator\" />
+    <None Remove="Commons\Repository\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dtos\" />
-    <Folder Include="Services\" />
     <Folder Include="Entities\" />
     <Folder Include="Entities\Pedidos\" />
     <Folder Include="Entities\Pedidos\Queries\" />
@@ -27,6 +28,9 @@
     <Folder Include="Entities\Pizzas\Commands\" />
     <Folder Include="Entities\Pizzas\Queries\" />
     <Folder Include="Entities\Pedidos\Handlers\" />
+    <Folder Include="Commons\" />
+    <Folder Include="Commons\Mediator\" />
+    <Folder Include="Commons\Repository\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\src\Telepi.Business\Telepi.Business.csproj" />
