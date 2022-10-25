@@ -38,10 +38,21 @@ public class PedidosHandler : ICommandHandler<PedidoDTO>
         // El problema de usar un automapper es que o convierto el objeto en mutable
         // o me curro la configuración del mapeo a través del construcutor
         // Si monto yo el mapeo... me quito de ese problema
-        Pedido nuevoPedido;// = new Pedido(mediador, comando.cliente, pizzasAIncluir);
+
+        // Que necesito de partida? Un ID DE PEDIDO
+        try
+        {
+            Pedido nuevoPedido = new Pedido(mediador, comando.cliente, pizzasAIncluir);
+        }// Controlar posibles ostiones
         PedidoDTO nuevoPedidoDTO;// new PedidoDTO( mediador, comando.cliente, pizzasAIncluir);
-        int id= contexto.persistir(nuevoPedidoDTO);
+
+        try
+        {
+            // Potencial sitio para otro mediador. Habitual en CQRS
+            nuevoPedidoDTO = contexto.persistir(nuevoPedidoDTO);
+        }
         //nuevoPedido.Id = id;
+        //mediadorComandos.commitCommando(comando); Para reprocesar pedidos que en los que se haya producido un error sin perderlos
         return new Respuesta<PedidoDTO>(nuevoPedidoDTO);
     }
 

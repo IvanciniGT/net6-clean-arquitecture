@@ -1,7 +1,6 @@
-﻿<Properties GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+﻿<Properties StartupConfiguration="{0F8D9FC4-6430-444B-A898-E6CDFFCE7CC9}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.ItemProperties.Telepi.API PreferredExecutionTarget="/Applications/Google Chrome.app" FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="src/Telepi.Business/Commons/IMediador.cs">
     <Files>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telepi.Business", "src\Tele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telepi.Application", "Telepi.Application\Telepi.Application.csproj", "{70F5A700-9B7A-4C29-ADBE-4A7D3E56E4A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telepi.API", "src\Telepi.API\Telepi.API.csproj", "{0F8D9FC4-6430-444B-A898-E6CDFFCE7CC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{70F5A700-9B7A-4C29-ADBE-4A7D3E56E4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70F5A700-9B7A-4C29-ADBE-4A7D3E56E4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70F5A700-9B7A-4C29-ADBE-4A7D3E56E4A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F8D9FC4-6430-444B-A898-E6CDFFCE7CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F8D9FC4-6430-444B-A898-E6CDFFCE7CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F8D9FC4-6430-444B-A898-E6CDFFCE7CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F8D9FC4-6430-444B-A898-E6CDFFCE7CC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

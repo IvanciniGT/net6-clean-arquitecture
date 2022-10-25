@@ -2,6 +2,7 @@
 
 public enum EstadoPedido
 {
+    NONE = -1,
     RECIBIDO = 0,
     EN_PROCESO = 1,
     LISTO = 2,

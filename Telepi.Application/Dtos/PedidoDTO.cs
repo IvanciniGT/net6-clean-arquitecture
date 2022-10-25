@@ -8,7 +8,7 @@ namespace Telepi.Application.Dtos  // POCO
 {
     public class PedidoDTO : IDTO
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Cliente { get;  set; }
         public EstadoPedido Estado { get;  set; }
         public IReadOnlyCollection<PizzaDTO> Pizzas { get;  set; }
