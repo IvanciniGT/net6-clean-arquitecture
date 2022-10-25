@@ -24,7 +24,8 @@ public class PedidosHandler : ICommandHandler
 
     internal void handle(NuevoPedidoCommand comando) {
         IReadOnlyCollection<PizzaPersonalizada> pizzasAIncluir;// = comando.pizzas; Lo podré hacer con un mapper
-        // El problema de usar un automapper es que convierto el objeto en mutable
+        // El problema de usar un automapper es que o convierto el objeto en mutable
+        // o me curro la configuración del mapeo a través del construcutor
         // Si monto yo el mapeo... me quito de ese problema
         Pedido nuevoPedido = new Pedido(IMediador mediador, comando.cliente, pizzasAIncluir);
         int id=repositorio.persistir(nuevoPedido);
