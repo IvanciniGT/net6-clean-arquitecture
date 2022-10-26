@@ -12,7 +12,7 @@ public interface IPedidosHandler : ICommandHandler
 {
 }
 
-public class PedidosHandler : IPedidosHandler
+public class PedidosHandler : AbstractHandler, IPedidosHandler
 {
 
     private IRepositorio contexto;
@@ -24,13 +24,16 @@ public class PedidosHandler : IPedidosHandler
         this.contexto = contexto;
         this.mediador = mediador;
         this.mediadorComandos = mediadorComandos;
-        //this.mediadorComandos.subscribe( this );
+    }
+
+    protected override void subscribe() {
+        this.mediadorComandos.subscribeToComand<PedidosHandler, NuevoPedidoCommand>();
     }
 
     //public void handle(ICommand comando)
     //{
 
-    public Respuesta handle(ICommand comando)
+    public override Respuesta handle(ICommand comando)
     {
         // CASE !
         return NuevoPedido((NuevoPedidoCommand)comando);

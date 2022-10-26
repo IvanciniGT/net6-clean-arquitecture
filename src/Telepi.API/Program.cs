@@ -17,7 +17,8 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddScoped<IRepositorio, Repositorio>();                        // Inyectamo el Mediador de Comandos
     builder.Services.AddScoped<IPedidosHandler, PedidosHandler>();                  // Inyectamo el Mediador de Comandos
                                                                                     // El PedidosHandler,NuevoPedidoCommand
-    //subscribeToComand<PedidosHandler, NuevoPedidoCommand>();
+
+    subscribeToComand<PedidosHandler, NuevoPedidoCommand>();
 //Registro el la instancia en el mediador
 
 builder.Services.AddControllers();

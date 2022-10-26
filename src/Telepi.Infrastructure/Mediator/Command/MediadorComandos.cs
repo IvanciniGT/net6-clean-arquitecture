@@ -5,9 +5,11 @@ namespace Telepi.Infrastructure.Mediator.Command;
 public class MediadorComandos: IMediadorComandos
 {
     private ICommandHandler? handler;
+    private Dictionary<Type,Type> handlers;
 
-    public MediadorComandos()
+    public MediadorComandos(  )
     {
+        this.handlers=new Dictionary<Type, Type>();
     }
 
     Respuesta IMediadorComandos.execute(ICommand comando)
@@ -15,8 +17,10 @@ public class MediadorComandos: IMediadorComandos
         //if (this.handler is null)
         //    throw new Exception("Handler Not Assigned");
         // Buscar en el mapa el handler correspondiente:
+        Type handlerType = handlers[comando.GetType()];
+        // Correspondientes compraciones
         // Instanciar el Handler
-
+        ICommandHandler handler;
         return handler.handle(comando);
     }
     /*
@@ -30,6 +34,8 @@ public class MediadorComandos: IMediadorComandos
     public void subscribeToComand<H, C>() where H : ICommandHandler where C : ICommand
     {
         //Guardar en un Map los tipos
+        // Comprobación. Si ya existe error o que se machaque
+        this.handlers.Add(typeof(C), typeof(H));
     }
 
 }
