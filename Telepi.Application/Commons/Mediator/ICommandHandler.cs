@@ -2,7 +2,7 @@
 
 namespace Telepi.Application.Commons.Mediator;
 
-public interface ICommandHandler<T>
+public interface ICommandHandler
 {
-    Respuesta<T> handle(ICommand comando);
+    Respuesta handle(ICommand comando);
 }

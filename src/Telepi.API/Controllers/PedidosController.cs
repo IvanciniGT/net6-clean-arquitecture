@@ -26,10 +26,10 @@ public class PedidosController : ControllerBase
     {
         // Validar datos del pedido se hace en capa 2 y 1
         ICommand realizarPedido = new NuevoPedidoCommand(datosPedido.Cliente, DTOsMappings.createPizzasDTO(datosPedido.Pizzas));
-        Respuesta<PedidoDTO> respuesta = mediadorComandos.execute<PedidoDTO>(realizarPedido);
+        Respuesta respuesta = mediadorComandos.execute(realizarPedido);
         
         // A mapear otra vez!
-        return respuesta.exito==EstadoRespuestaComando.SUCCESS ? Ok(DTOsMappings.createPedidoResponseDTO(respuesta.valor))
+        return respuesta.exito==EstadoRespuestaComando.SUCCESS ? Ok(DTOsMappings.createPedidoResponseDTO((PedidoDTO)respuesta.valor))
                 :BadRequest(respuesta.exception.Message)
                 ;
     }
@@ -41,4 +41,3 @@ public class PedidosController : ControllerBase
     }
     */
 }
-

@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Telepi.Application.Dtos
 {
-    public interface IDTO
+    public class BaseDTO
     {
         public Guid Id { get; set; }
     }

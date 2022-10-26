@@ -8,18 +8,18 @@ using Telepi.Application.Dtos;
 using Telepi.Application.Commons.DBContext;
 
 namespace Telepi.Application.Entities.Pedidos.Handlers;
-public interface IPedidosHandler : ICommandHandler<PedidoDTO>
+public interface IPedidosHandler : ICommandHandler
 {
 }
 
 public class PedidosHandler : IPedidosHandler
 {
 
-    private IDBContext contexto;
+    private IRepositorio contexto;
     private IMediador mediador;
     private IMediadorComandos mediadorComandos;
 
-    public PedidosHandler(IDBContext contexto, IMediador mediador, IMediadorComandos mediadorComandos)
+    public PedidosHandler(IRepositorio contexto, IMediadorEventos mediador, IMediadorComandos mediadorComandos)
     {
         this.contexto = contexto;
         this.mediador = mediador;
@@ -30,13 +30,13 @@ public class PedidosHandler : IPedidosHandler
     //public void handle(ICommand comando)
     //{
 
-    public Respuesta<PedidoDTO> handle(ICommand comando)
+    public Respuesta handle(ICommand comando)
     {
         // CASE !
         return NuevoPedido((NuevoPedidoCommand)comando);
     }
 
-    private Respuesta<PedidoDTO> NuevoPedido(NuevoPedidoCommand comando)
+    private Respuesta NuevoPedido(NuevoPedidoCommand comando)
     {
         IReadOnlyCollection<PizzaPersonalizada> pizzasAIncluir = DTOsMappings.createPizzasPersonalizadas(comando.pizzas);
         // El problema de usar un automapper es que o convierto el objeto en mutable
@@ -52,11 +52,12 @@ public class PedidosHandler : IPedidosHandler
         //try
         //{
         // Potencial sitio para otro mediador. Habitual en CQRS
-        nuevoPedidoDTO = contexto.persistir(nuevoPedidoDTO);
+        contexto.persistir(nuevoPedidoDTO);
+        contexto.SaveChanges();
         //}
-        //nuevoPedido.Id = id;
+        nuevoPedido.Id = nuevoPedidoDTO.Id;
         //mediadorComandos.commitCommando(comando); Para reprocesar pedidos que en los que se haya producido un error sin perderlos
-        return new Respuesta<PedidoDTO>(nuevoPedidoDTO);
+        return new Respuesta(nuevoPedidoDTO);
     }
 
 }

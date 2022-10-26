@@ -4,18 +4,33 @@ namespace Telepi.Infrastructure.Mediator.Command;
 
 public class MediadorComandos: IMediadorComandos
 {
+    private ICommandHandler? handler;
+
     public MediadorComandos()
     {
     }
 
-    Respuesta<T> IMediadorComandos.execute<T>(ICommand comando)
+    Respuesta IMediadorComandos.execute(ICommand comando)
     {
-        throw new NotImplementedException();
+        if (this.handler is null)
+            throw new Exception("Handler Not Assigned");
+        // Buscar en el mapa el handler correspondiente:
+        // Instanciar el Handler
+
+        return handler.handle(comando);
     }
 
-    void IMediadorComandos.subscribe<T>(ICommandHandler<T> handler)
+    void IMediadorComandos.subscribe(ICommandHandler handler) // Solo puede haber 1 único subscriptor
     {
-        throw new NotImplementedException();
+        if(this.handler is not null)
+            throw new Exception("Handler Already Assigned");
+        this.handler=handler;
     }
+    /*
+    public void subscribeToComand<H, C>() where H : ICommandHandler where C : ICommand
+    {
+        //Guardar en un Map los tipos
+    }*/
+
 }
 

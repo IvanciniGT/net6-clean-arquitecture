@@ -9,8 +9,8 @@ namespace Telepi.Business.Entities  // POCO
     public class Pedido 
     {
 
-        public Guid Id { get;  internal set; }
-        public string Cliente { get; private set; }
+        public Guid Id { get;  set; }
+        public string Cliente { get; set; }
         private EstadoPedido _Estado = EstadoPedido.NONE;
         
         public EstadoPedido Estado
@@ -32,8 +32,8 @@ namespace Telepi.Business.Entities  // POCO
                 this._Estado = value;
             }
         }
-        public IReadOnlyCollection<PizzaPersonalizada> PizzasPersonalizadas { get; private set; }
-        public IReadOnlyCollection<Pizza> Pizzas { get; private set; } // No persistirlo
+        public IReadOnlyCollection<PizzaPersonalizada> PizzasPersonalizadas { get; set; }
+        public IReadOnlyCollection<Pizza> Pizzas { get; set; } // No persistirlo
         private IMediador mediador;
 
         public Pedido(IMediador mediador,  string cliente, IReadOnlyCollection<PizzaPersonalizada> pizzasPersonalizadas)

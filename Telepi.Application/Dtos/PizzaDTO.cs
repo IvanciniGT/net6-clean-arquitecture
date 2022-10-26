@@ -3,7 +3,7 @@ using Telepi.Business.ValueObjects;
 
 namespace Telepi.Application.Dtos;
 
-public class PizzaDTO: IDTO
+public class PizzaDTO: BaseDTO
 {
     public Guid Id { get; set; }
 
