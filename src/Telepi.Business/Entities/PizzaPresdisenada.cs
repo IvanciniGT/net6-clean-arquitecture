@@ -11,10 +11,6 @@ namespace Telepi.Business.Entities
         public string Nombre { get;  set; }
         public ConceptoDePizza Pizza { get;  set; }
 
-        public PizzaPredisenada()
-        {
-            // TODO: Revisar id... si se calcula en automatico si no se pasa.... y si permito pasarlo}
-        }
         public PizzaPredisenada(int id, string nombre, ConceptoDePizza pizza)
         {
             Id = id;

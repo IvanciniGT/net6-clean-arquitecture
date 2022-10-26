@@ -1,33 +1,44 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Telepi.API.Dtos;
+using Telepi.Application.Entities.Pedidos.Commands;
+using Telepi.Application.Commons.Mediator;
+using Telepi.Application.Dtos;
+using Telepi.Business.Enums;
+using Telepi.Business.ValueObjects;
+using System.Linq;
+using Telepi.API.Commons.Maps;
 
 namespace Telepi.API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class PedidosController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
 
-    private readonly ILogger<WeatherForecastController> _logger;
+    IMediadorComandos mediadorComandos;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
-    {
-        _logger = logger;
+    public PedidosController(IMediadorComandos mediadorComandos) {
+        this.mediadorComandos = mediadorComandos;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    [HttpPost]
+    public IActionResult NuevoPedido(PedidoRequestDTO datosPedido)
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = DateTime.Now.AddDays(index),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+        // Validar datos del pedido se hace en capa 2 y 1
+        ICommand realizarPedido = new NuevoPedidoCommand(datosPedido.Cliente, DTOsMappings.createPizzasDTO(datosPedido.Pizzas));
+        Respuesta<PedidoDTO> respuesta = mediadorComandos.execute<PedidoDTO>(realizarPedido);
+        
+        // A mapear otra vez!
+        return respuesta.exito==EstadoRespuestaComando.SUCCESS ? Ok(respuesta.valor)
+                :BadRequest(respuesta.exception.Message)
+                ;
     }
+    /*
+    [HttpGet]
+    public IActionResult RecuperarPedidos()
+    {
+        return Ok(pedidos);
+    }
+    */
 }
 

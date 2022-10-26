@@ -5,11 +5,13 @@ namespace Telepi.Application.Dtos;
 
 public class PizzaDTO: IDTO
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; }
 
-    public ConceptoDePizza ConceptoDePizza { get;  set; }
+    public IReadOnlyCollection<string> Ingredientes { get; set; }
 
-    public Tamano Tamano { get;  set; }
+    public int Masa { get; set; }
+
+    public int Tamano { get;  set; }
 
 }
 

@@ -1,11 +1,13 @@
-﻿using System;
-namespace Telepi.API.Dtos
+﻿namespace Telepi.API.Dtos;
+
+public class PizzaHttpDTO
 {
-    public class PizzaRequestDTO
-    {
-        public PizzaRequestDTO()
-        {
-        }
-    }
+    
+    public IReadOnlyCollection<string> Ingredientes { get; set; }
+
+    public int Masa { get; set; }
+
+    public int Tamano { get; set; }
+
 }
 
