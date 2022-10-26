@@ -1,11 +1,16 @@
-﻿using System;
-namespace Telepi.Infrastructure.Persistence
+﻿using Telepi.Application.Commons.DBContext;
+
+namespace Telepi.Infrastructure.Persistence;
+
+public class MiDataBaseContext: IDBContext
 {
-    public class MiDataBaseContext
+    public MiDataBaseContext()
     {
-        public MiDataBaseContext()
-        {
-        }
+    }
+
+    T IDBContext.persistir<T>(T dto)
+    {
+        throw new NotImplementedException();
     }
 }
 

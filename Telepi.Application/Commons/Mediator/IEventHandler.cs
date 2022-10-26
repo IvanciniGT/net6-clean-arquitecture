@@ -1,8 +1,9 @@
-﻿using System;
-namespace Telepi.Application.Commons.Mediator
+﻿namespace Telepi.Application.Commons.Mediator;
+
+public interface IEventHandler
 {
-    public interface IEventHandler
-    {
-    }
+
+    public void notify(Evento evento);
+
 }
 
