@@ -29,7 +29,7 @@ public class PedidosController : ControllerBase
         Respuesta<PedidoDTO> respuesta = mediadorComandos.execute<PedidoDTO>(realizarPedido);
         
         // A mapear otra vez!
-        return respuesta.exito==EstadoRespuestaComando.SUCCESS ? Ok(respuesta.valor)
+        return respuesta.exito==EstadoRespuestaComando.SUCCESS ? Ok(DTOsMappings.createPedidoResponseDTO(respuesta.valor))
                 :BadRequest(respuesta.exception.Message)
                 ;
     }

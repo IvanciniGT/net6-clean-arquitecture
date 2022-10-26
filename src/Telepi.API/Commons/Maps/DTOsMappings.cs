@@ -21,6 +21,9 @@ public static class DTOsMappings
         return pizza;
     }
 
-
+    internal static PedidoResponseDTO createPedidoResponseDTO(PedidoDTO? valor)
+    {
+        throw new NotImplementedException();
+    }
 }
 

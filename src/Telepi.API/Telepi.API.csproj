@@ -24,5 +24,8 @@
     <ProjectReference Include="..\..\Telepi.Application\Telepi.Application.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\Telepi.Infrastructure\Telepi.Infrastructure.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>
