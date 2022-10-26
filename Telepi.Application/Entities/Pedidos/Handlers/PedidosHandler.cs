@@ -24,7 +24,7 @@ public class PedidosHandler : IPedidosHandler
         this.contexto = contexto;
         this.mediador = mediador;
         this.mediadorComandos = mediadorComandos;
-        this.mediadorComandos.subscribe( this );
+        //this.mediadorComandos.subscribe( this );
     }
 
     //public void handle(ICommand comando)
