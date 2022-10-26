@@ -8,8 +8,11 @@ using Telepi.Application.Dtos;
 using Telepi.Application.Commons.DBContext;
 
 namespace Telepi.Application.Entities.Pedidos.Handlers;
+public interface IPedidosHandler : ICommandHandler<PedidoDTO>
+{
+}
 
-public class PedidosHandler : ICommandHandler<PedidoDTO>
+public class PedidosHandler : IPedidosHandler
 {
 
     private IDBContext contexto;
